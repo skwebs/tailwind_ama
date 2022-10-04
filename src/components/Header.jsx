@@ -1,13 +1,12 @@
 import React, { useState } from 'react'
-import { HiMenuAlt3 } from 'react-icons/hi'
-import { CgClose } from 'react-icons/cg'
 import { FiArrowLeftCircle } from 'react-icons/fi'
 import { AppNavLinks } from '../constants'
 import { FaFacebook } from 'react-icons/fa'
 import { AiFillTwitterCircle, AiFillInstagram, AiFillYoutube } from 'react-icons/ai'
+
 const Header = () => {
     const [toggle, setToggle] = useState(false);
-
+    const genericHamburgerLine = `h-0.5 w-6 my-1 rounded-full bg-black transition ease transform duration-300`;
     return (
         <>
             <div className="relative bg-white shadow-lg w-full text-slate-700 z-20">
@@ -21,8 +20,27 @@ const Header = () => {
                         </ul>
                     </nav>
                     {/* responsive menu */}
-                    {!toggle ? <HiMenuAlt3 onClick={() => setToggle(!toggle)} className='block md:hidden text-black text-5xl hover:bg-slate-700 hover:text-white rounded-md p-2' /> :
-                        <CgClose onClick={() => setToggle(!toggle)} className='block md:hidden text-black text-5xl hover:bg-slate-700 hover:text-white rounded-md p-2' />}
+                    <button
+                        className="md:hidden flex flex-col h-12 w-12 rounded justify-center items-center group overflow-visible"
+                        onClick={() => setToggle(!toggle)}
+                    >
+                        <span
+                            className={`${genericHamburgerLine} ${toggle
+                                ? "rotate-45 translate-y-2"
+                                : ""
+                                }`}
+                        />
+                        <span
+                            className={`${genericHamburgerLine} ${toggle ? "opacity-0 -translate-x-3" : " group-hover:opacity-100"
+                                }`}
+                        />
+                        <span
+                            className={`${genericHamburgerLine} ${toggle
+                                ? "-rotate-45 -translate-y-3"
+                                : ""
+                                }`}
+                        />
+                    </button>
                 </div>
             </div>
             {/* mobile menu sidebar drawer */}
