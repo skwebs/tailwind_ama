@@ -10,7 +10,7 @@ const Layout = () => {
                 <header className='flex-grow-0 flex-shrink-0 w-full'>
                     <Header />
                 </header>
-                <main className='flex-grow flex-shrink-0'>
+                <main className='flex-grow flex-shrink-0 mt-14'>
                     <Outlet />
                 </main>
                 <footer className='flex-grow-0 flex-shrink-0'>

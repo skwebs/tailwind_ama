@@ -3,5 +3,6 @@
     "*.js": "javascriptreact",
     "*.jsx": "javascriptreact"
   },
-  "editor.wordWrap": "on"
+  "editor.wordWrap": "on",
+  "auto-close-tag.SublimeText3Mode": true
 }
