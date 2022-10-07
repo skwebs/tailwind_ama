@@ -1,18 +1,14 @@
 import { SocialIconsList } from '../constants'
 
 const SocialIcons = () => {
-    // const socialIconsStyle = `rounded-full border-2 border-slate-700 text-slate-700 leading-normal hover:text-sky-500 hover:border-sky-500 focus:outline-none focus:ring-0 transition duration-200 ease-in-out w-9 h-9 m-1 my-transition`;
-    const socialIconsStyle = `text-slate-400 hover:text-slate-700 dark:hover:text-white rounded-full hover:bg-slate-100 text-slate-700 leading-normal hover:text-slate-700 hover:border-slate-700 focus:outline-none focus:ring-0 transition duration-200 ease-in-out w-9 h-9 my-transition`;
-    // const socialIconsStyle = `text-slate-400 hover:text-slate-900 dark:hover:text-white`;
+    const iconColorStyle = `bg-gradient-to-bl from-transparent to-slate-100 text-slate-400 after:bg-gray-200 hover:text-slate-700 focus:text-slate-700 after:bg-gradient-to-tr after:from-slate-50`;
     return (
         <>
-
             {SocialIconsList.map((si, index) => (
-                <a key={index} href={si.href} target='_blank' rel="noreferrer" type="button" className={socialIconsStyle}>
+                <a key={index} href={si.href} target='_blank' rel="noreferrer" type="button" className={`relative flex justify-center items-center outline-none w-[40px] h-[40px] no-underline rounded-full text-center shadow after:content-[''] after:absolute -after:top-1/2 -after:left-1/2 after:block after:w-0 after:h-0 after:rounded-full after:duration-200 hover:after:w-full hover:after:h-full focus:after:w-full focus:after:h-full ${iconColorStyle}`}>
                     {si.icon} <span className="sr-only">{si.text}</span>
                 </a>
             ))}
-
         </>
     )
 }

@@ -29,7 +29,8 @@ const AppNavLinks = [
     },
 
 ]
-const iconStyle = ` w-5 h-full mx-auto`;
+// const iconStyle = `w-full h-full mx-auto hover:bg-blue hover:fill-white duration-300 block leading-10`;
+const iconStyle = 'relative z-[1] duration-300 text-[28] w-2/5 h-2/5';
 const SocialIconsList = [
     { 'href': 'https://youtube.com/AnshuMemorialAcademy', 'icon': <FaYoutube className={iconStyle} />, 'text': 'YouTube Channel' },
     { 'href': 'https://facebook.com/AnshuMemorialAcademy', 'icon': <GrFacebookOption className={iconStyle} />, 'text': 'Facebook Page' },

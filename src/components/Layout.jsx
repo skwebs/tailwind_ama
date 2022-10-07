@@ -6,7 +6,7 @@ import Header from './Header'
 const Layout = () => {
     return (
         <>
-            <div className='flex flex-col h-screen'>
+            <div className='flex flex-col min-h-screen bg-white text-slate-800 enable-dark-mode'>
                 <header className='flex-grow-0 flex-shrink-0 w-full'>
                     <Header />
                 </header>

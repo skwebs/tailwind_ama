@@ -2,21 +2,95 @@
 @tailwind components;
 @tailwind utilities;
 
-  .my-transition {
-    @apply ease-in-out transition-all duration-200;
-  }
+.my-transition {
+  @apply ease-in-out transition-all duration-200;
+}
 
+.active {
+  @apply text-sky-500 border-sky-500;
+}
 
-  .active {
-    @apply text-sky-500 ;
-  }
-
-  .link-hover{
-    @apply hover:text-sky-500;
-  }
-
-  /* .active{
+.link-hover {
+  @apply hover:text-sky-500;
+}
+/* #2b2b2b or 393939 */
+.enable-dark-mode {
+  @apply dark:bg-gray-900 dark:text-gray-400;
+}
+/* .active{
     box-shadow: inset 0 -0.15em #334115;
     padding-bottom: 1rem;
     padding-top: 1rem;
   } */
+.sidebar-social a {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px !important;
+  background: #fff;
+  font-size: 1.25rem;
+  border-radius: 50%;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+  z-index: 1;
+  margin: 0 5px;
+  -webkit-box-shadow: 2px 2px 5px 2px hsla(0, 0%, 0%, 0.15);
+  box-shadow: 2px 2px 5px 2px hsla(0, 0%, 0%, 0.15);
+}
+
+.sidebar-social a .fa {
+  line-height: 40px !important;
+}
+
+.sidebar-social a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  z-index: -1;
+}
+
+.sidebar-social a:hover {
+  color: #fff;
+}
+
+.sidebar-social a:hover:before {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+/*facebook*/
+.sidebar-social .sb-fb:before {
+  background: #3b5998;
+}
+
+/* twitter */
+.sidebar-social .sb-tw:before {
+  background: #00acee;
+}
+
+/* instagram */
+.sidebar-social .sb-insta:before {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+}
+
+/* youtube */
+.sidebar-social .sb-yt:before {
+  background: #fe0000;
+}

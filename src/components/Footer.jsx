@@ -8,7 +8,7 @@ const Footer = () => {
       <div className='p-6'>
 
         <footer className="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-slate-800">
-          <span className="text-sm text-slate-500 sm:text-center dark:text-slate-400">&copy; {new Date().getFullYear()} <Link className='hover:underline' href="/">AMA™</Link>. All Rights Reserved.
+          <span className="text-sm text-slate-500 sm:text-center dark:text-slate-400">&copy; {new Date().getFullYear()} <Link className='hover:underline' href="/">AMA</Link>. All Rights Reserved.
           </span>
           <ul className="flex flex-wrap items-center mt-3 text-sm text-slate-500 dark:text-slate-400 sm:mt-0">
             <li>
@@ -97,7 +97,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="py-6 px-4 bg-slate-100 dark:bg-slate-700 md:flex md:items-center md:justify-between">
-          <span className="text-sm text-slate-500 dark:text-slate-300 sm:text-center">  &copy; {new Date().getFullYear()} <Link className='hover:underline' href="/">AMA™</Link>. All Rights Reserved.
+          <span className="text-sm text-slate-500 dark:text-slate-300 sm:text-center">  &copy; {new Date().getFullYear()} <Link className='hover:underline' to="/">AMA</Link>. All Rights Reserved.
           </span>
           <div className="flex mt-4 space-x-2 sm:justify-center md:mt-0">
             {<SocialIcons />}

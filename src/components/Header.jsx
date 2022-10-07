@@ -16,32 +16,28 @@ const Header = () => {
 
 
         {/* sidebar menu */}
-        <aside className={`${toggle ? 'translate-x-0' : '-translate-x-full'} fixed shadow-lg md:hidden z-10 transform top-0 left-0 h-full overflow-auto ease-in-out transition-all duration-300 bg-white w-80 max-w-[calc(100%-3rem)]  dark:bg-slate-800`}>
+        <aside className={`${toggle ? 'translate-x-0' : '-translate-x-full'} fixed shadow-lg md:hidden z-10 transform top-0 left-0 h-full overflow-x-hidden ease-in-out transition-all duration-300 bg-white w-80 max-w-[calc(100%-3rem)]  dark:bg-slate-800`}>
             {/* header */}
-            <div className='flex justify-between py-2 pl-6 overflow-auto'>
-                <div className='w-full text-teal-600 shadow rounded p-2'>
-                    <table>
-                        <tr>
-                            <td className='font-semibold'>Name</td><td className='px-2'> : </td><td>Satish Kumar Sharma</td>
-                        </tr>
-                        <tr>
-                            <td className='font-semibold'>Roll No.</td><td className='px-2'> : </td><td>40</td>
-                        </tr>
-                    </table>
+            <div className='flex justify-between py-2 pl-6'>
+                <div className='w-full text-slate-500 p-2'>
+                    <h2 className='font-bold text-[1.5rem] text-center uppercase'>Anshu Memorial Academy</h2>
                 </div>
                 <MdClose onClick={() => setToggle(false)} className='block md:hidden text-4xl p-1 mx-2' />
             </div>
             {/* mobile navigation */}
-            <nav className=' border-b-[1px] px-6 pb-2'>
-                <ul className=''>
+            <nav className=' px-6 pb-2'>
+                <ul className='flex flex-col space-y-2'>
                     {AppNavLinks.map((nav, index) => (
-                        <li key={index} ><NavLink onClick={() => setToggle(false)} end className={`${commonLinkStyle} px-5 py-3 hover:bg-slate-100`} to={nav.link}>{nav.name}</NavLink></li>
+                        <li key={index} ><NavLink onClick={() => setToggle(false)} end className={`${commonLinkStyle} border px-5 py-3 hover:bg-slate-100`} to={nav.link}>{nav.name}</NavLink></li>
                     ))}
 
                 </ul>
             </nav>
-            <div className='flex space-x-2 justify-center mt-8'>
-                {<SocialIcons />}
+            <div className='px-6'>
+                {/* <div className='border-b-[1px] my-6'></div> */}
+                <div className='flex space-x-2 justify-center mt-6'>
+                    {<SocialIcons />}
+                </div>
             </div>
         </aside>
 

@@ -4,7 +4,8 @@ import Home from './Home'
 import About from './About'
 import Contact from './Contact'
 import Sitemap from './Sitemap'
+import ErrorPage from './ErrorPage'
 
 export {
-    Register, Login, Home, About, Contact, Sitemap
+    Register, Login, Home, About, Contact, Sitemap, ErrorPage
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 // import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider, Routes } from 'react-router-dom'
-import { ErrorPage, Layout } from './components'
-import { About, Contact, Home, Login, Register, Sitemap } from './pages'
+import { Layout } from './components'
+import { About, Contact, ErrorPage, Home, Login, Register, Sitemap } from './pages'
 import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom'
 
 const router = createBrowserRouter(
