@@ -4,5 +4,6 @@
     "*.jsx": "javascriptreact"
   },
   "editor.wordWrap": "on",
-  "auto-close-tag.SublimeText3Mode": true
+  "auto-close-tag.SublimeText3Mode": true,
+  "liveServer.settings.port": 5501
 }

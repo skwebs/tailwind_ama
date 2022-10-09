@@ -27,7 +27,6 @@ const Footer = () => {
         </footer>
       </div>
 
-
       <footer className="bg-white dark:bg-slate-900">
         <div className="grid grid-cols-2 gap-8 py-8 px-6 md:grid-cols-4">
           <div className='mx-auto container'>

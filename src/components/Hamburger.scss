@@ -1,0 +1,59 @@
+$size: 24px;
+$color: #000;
+$transition: all 0.26s cubic-bezier(0.5, 0.1, 0.4, 1.8);
+
+.hamburger {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $size ;
+  height: $size ;
+  cursor: pointer;
+  transition: $transition;
+
+  &-line {
+    width: calc($size * calc(3 / 4));
+    height: calc($size * calc(3 / 40));
+    background-color: $color;
+    transition: $transition;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: calc($size * calc(3 / 4));
+      height: calc($size * calc(3 / 40));
+      background-color: $color;
+      transition: $transition;
+    }
+
+    &::before {
+      transform: translateY(- calc($size / 5));
+    }
+
+    &::after {
+      transform: translateY(calc($size / 5));
+    }
+  }
+
+  // animation
+  &.menu-active {
+    .hamburger-line {
+      transform: translateX(-$size * calc(5 / 8));
+      background: transparent;
+
+      &::before {
+        border-radius: calc($size / 25);
+        transform: rotate(135deg)
+          translate(-$size * calc(11 / 25), -$size * calc(11 / 25));
+      }
+
+      &::after {
+        border-radius: calc($size / 25);
+        transform: rotate(-135deg)
+          translate(-$size * calc(11 / 25), $size * calc(11 / 25));
+      }
+    }
+  }
+}

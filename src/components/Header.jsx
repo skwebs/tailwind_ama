@@ -3,11 +3,13 @@ import { MdClose } from 'react-icons/md'
 import { AppNavLinks } from '../constants'
 import { NavLink } from 'react-router-dom'
 import SocialIcons from './SocialIcons'
+// import HamburgerBtn from './HamburgerBtn';
+import Hamburger from './Hamburger';
 
 const Header = () => {
     const [toggle, setToggle] = useState(false);
 
-    const genericHamburgerLine = `h-0.5 w-6 my-1 rounded-full bg-black transition ease transform duration-300`;
+    // const genericHamburgerLine = `h-0.5 w-5 my-[2px] rounded-full bg-black transition ease transform duration-300`;
     const commonLinkStyle = `group font-semibold items-center flex rounded-md text-slate-700 cursor-pointer`;
 
     const sidebarDrawer = <>
@@ -16,7 +18,7 @@ const Header = () => {
 
 
         {/* sidebar menu */}
-        <aside className={`${toggle ? 'translate-x-0' : '-translate-x-full'} fixed shadow-lg md:hidden z-10 transform top-0 left-0 h-full overflow-x-hidden ease-in-out transition-all duration-300 bg-white w-80 max-w-[calc(100%-3rem)]  dark:bg-slate-800`}>
+        <aside className={` ${toggle ? 'translate-x-0' : '-translate-x-full'} fixed shadow-lg md:hidden z-10 transform top-0 left-0 h-full overflow-x-hidden ease-in-out transition-all duration-300 bg-white w-80 max-w-[calc(100%-3rem)]  dark:bg-slate-800`}>
             {/* header */}
             <div className='flex justify-between py-2 pl-6'>
                 <div className='w-full text-slate-500 p-2'>
@@ -34,7 +36,6 @@ const Header = () => {
                 </ul>
             </nav>
             <div className='px-6'>
-                {/* <div className='border-b-[1px] my-6'></div> */}
                 <div className='flex space-x-2 justify-center mt-6'>
                     {<SocialIcons />}
                 </div>
@@ -47,6 +48,7 @@ const Header = () => {
         <>
             <div className="fixed top-0 bg-white shadow-lg w-full text-slate-700">
                 <div className='container mx-auto flex justify-between items-center px-2'>
+
                     <div className='text-2xl p-3 cursor-pointer font-bold'>AMA</div>
                     <nav>
                         <ul className='hidden md:flex items-center'>
@@ -56,27 +58,9 @@ const Header = () => {
                         </ul>
                     </nav>
                     {/* responsive menu */}
-                    <button
-                        className="md:hidden flex flex-col h-12 w-12 rounded justify-center items-center group overflow-visible"
-                        onClick={() => setToggle(!toggle)}
-                    >
-                        <span
-                            className={`${genericHamburgerLine} ${toggle
-                                ? "rotate-45 translate-y-2"
-                                : ""
-                                }`}
-                        />
-                        <span
-                            className={`${genericHamburgerLine} ${toggle ? "opacity-0 -translate-x-3" : " group-hover:opacity-100"
-                                }`}
-                        />
-                        <span
-                            className={`${genericHamburgerLine} ${toggle
-                                ? "-rotate-45 -translate-y-3"
-                                : ""
-                                }`}
-                        />
-                    </button>
+                    <div className='p-[11px] md:hidden flex flex-col rounded-full justify-center items-center group overflow-visible hover:shadow hover:bg-gradient-to-bl hover:from-transparent hover:to-slate-100'>
+                        <Hamburger toggle={toggle} setToggle={setToggle} onClick={() => setToggle(!toggle)} />
+                    </div>
                 </div>
             </div>
 
