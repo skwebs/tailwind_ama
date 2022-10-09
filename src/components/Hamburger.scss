@@ -7,8 +7,8 @@ $transition: all 0.26s cubic-bezier(0.5, 0.1, 0.4, 1.8);
   display: flex;
   justify-content: center;
   align-items: center;
-  width: $size ;
-  height: $size ;
+  width: $size * 1.85;
+  height: $size * 1.85;
   cursor: pointer;
   transition: $transition;
 

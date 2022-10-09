@@ -21,10 +21,10 @@ const Header = () => {
         <aside className={` ${toggle ? 'translate-x-0' : '-translate-x-full'} fixed shadow-lg md:hidden z-10 transform top-0 left-0 h-full overflow-x-hidden ease-in-out transition-all duration-300 bg-white w-80 max-w-[calc(100%-3rem)]  dark:bg-slate-800`}>
             {/* header */}
             <div className='flex justify-between py-2 pl-6'>
-                <div className='w-full text-slate-500 p-2'>
+                <div className='w-full text-slate-500 py-2 pl-2'>
                     <h2 className='font-bold text-[1.5rem] text-center uppercase'>Anshu Memorial Academy</h2>
                 </div>
-                <MdClose onClick={() => setToggle(false)} className='block md:hidden text-4xl p-1 mx-2' />
+                <MdClose onClick={() => setToggle(false)} className='block md:hidden text-2xl mr-2 opacity-70 hover:opacity-100' />
             </div>
             {/* mobile navigation */}
             <nav className=' px-6 pb-2'>
@@ -58,8 +58,8 @@ const Header = () => {
                         </ul>
                     </nav>
                     {/* responsive menu */}
-                    <div className='p-[11px] md:hidden flex flex-col rounded-full justify-center items-center group overflow-visible hover:shadow hover:bg-gradient-to-bl hover:from-transparent hover:to-slate-100'>
-                        <Hamburger toggle={toggle} setToggle={setToggle} onClick={() => setToggle(!toggle)} />
+                    <div className='md:hidden flex flex-col rounded-full justify-center items-center group overflow-visible hover:shadow hover:bg-gradient-to-bl hover:from-transparent hover:to-slate-100'>
+                        <Hamburger className='' toggle={toggle} setToggle={setToggle} onClick={() => setToggle(!toggle)} />
                     </div>
                 </div>
             </div>

@@ -1,9 +1,25 @@
 {
-  "files.associations": {
-    "*.js": "javascriptreact",
-    "*.jsx": "javascriptreact"
-  },
-  "editor.wordWrap": "on",
-  "auto-close-tag.SublimeText3Mode": true,
-  "liveServer.settings.port": 5501
+    "files.associations": {
+        "*.js": "javascriptreact",
+        "*.jsx": "javascriptreact"
+    },
+    "editor.wordWrap": "on",
+    "auto-close-tag.SublimeText3Mode": true,
+    "liveServer.settings.port": 5501,
+
+    "prettier.tabWidth": 4,
+    "prettier.bracketSameLine": true,
+    "prettier.htmlWhitespaceSensitivity": "strict",
+    "prettier.jsxSingleQuote": true,
+    "prettier.withNodeModules": true,
+    "editor.formatOnSave": true,
+    "code-runner.saveAllFilesBeforeRun": true,
+    "code-runner.saveFileBeforeRun": true,
+    "javascript.format.insertSpaceAfterConstructor": true,
+    "[jsx]": {
+        "editor.bracketPairColorization.independentColorPoolPerBracketType": true
+    },
+    "prettier.resolveGlobalModules": true,
+    "projectManager.showParentFolderInfoOnDuplicates": true,
+    "prettier.singleAttributePerLine": true
 }
